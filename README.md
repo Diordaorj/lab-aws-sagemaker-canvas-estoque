@@ -6,44 +6,68 @@ Neste Projeto, trabalhamos com um dataset especialmente desenvolvido para atende
  A criação de um sistema de previsão de estoque inteligente utilizando Machine Learning No-Code com o Amazon SageMaker Canvas
 ## Objetivo
 O propósito é construir um modelo preditivo que melhore a gestão de estoque, antecipando a demanda futura e ajudando a evitar problemas como excesso ou falta de produtos. A utilização do SageMaker Canvas permite a construção e treinamento de modelos de Machine Learning sem a necessidade de codificação, tornando o processo mais acessível e eficiente.
-Antes de começar, certifique-se de ter uma conta na AWS. Se precisar de ajuda para criar sua conta, confira nosso repositório [AWS Cloud Quickstart](https://github.com/digitalinnovationone/aws-cloud-quickstart).
-
-
-## 🎯 Objetivos Deste Desafio de Projeto (Lab)
-
-![image](https://github.com/digitalinnovationone/lab-aws-sagemaker-canvas-estoque/assets/730492/72f5c21f-5562-491e-aa42-2885a3184650)
-
-- Dê um fork neste projeto e reescreva este `README.md`. Sinta-se à vontade para detalhar todo o processo de criação do seu Modelo de ML para uma "Previsão de Estoque Inteligente".
-- Para isso, siga o [passo a passo] descrito a seguir e evolua as suas habilidades em ML no-code com o Amazon SageMaker Canvas.
-- Ao concluir, envie a URL do seu repositório com a solução na plataforma da DIO.
 
 
 ## 🚀 Passo a Passo
 
-### 1. Selecionar Dataset
+### 1. Construindo o Dataset Inclusivo
+#### Esta etapa foi executada usando o ChatGpt
+![Captura de tela novo](https://github.com/user-attachments/assets/5921ef49-af53-4d0c-868b-ca01667c6046)
 
--   Navegue até a pasta `datasets` deste repositório. Esta pasta contém os datasets que você poderá escolher para treinar e testar seu modelo de ML. Sinta-se à vontade para gerar/enriquecer seus próprios datasets, quanto mais você se engajar, mais relevante esse projeto será em seu portfólio.
--   Escolha o dataset que você usará para treinar seu modelo de previsão de estoque.
--   Faça o upload do dataset no SageMaker Canvas.
+#### Apartir do Programa abaixo, foi gerado o DASET e salvo em CSV e usado no SageMaker
+![Captura de tela 2024-08-05 224430](https://github.com/user-attachments/assets/df00e36f-e577-4973-a8d6-57abd3f9999d)
 
-### 2. Construir/Treinar
 
--   No SageMaker Canvas, importe o dataset que você selecionou.
--   Configure as variáveis de entrada e saída de acordo com os dados.
--   Inicie o treinamento do modelo. Isso pode levar algum tempo, dependendo do tamanho do dataset.
+### 2. Construindo e Treinando
 
-### 3. Analisar
+-   Importado o dataset no SageMaker Canvas.
 
--   Após o treinamento, examine as métricas de performance do modelo.
--   Verifique as principais características que influenciam as previsões.
--   Faça ajustes no modelo se necessário e re-treine até obter um desempenho satisfatório.
+    ![Captura de tela build2](https://github.com/user-attachments/assets/e3111c25-c018-4723-9d38-d14715e7e5a3)
 
-### 4. Prever
 
--   Use o modelo treinado para fazer previsões de estoque.
--   Exporte os resultados e analise as previsões geradas.
--   Documente suas conclusões e qualquer insight obtido a partir das previsões.
+-   Configurado as variáveis de entrada e saída de acordo com os dados.
 
-## 🤔 Dúvidas?
+  ![Captura de tela predit](https://github.com/user-attachments/assets/d7c03acd-0332-4a2f-9bbe-c75b74de9b16)
 
-Esperamos que esta experiência tenha sido enriquecedora e que você tenha aprendido mais sobre Machine Learning aplicado a problemas reais. Se tiver alguma dúvida, não hesite em abrir uma issue neste repositório ou entrar em contato com a equipe da DIO.
+
+
+### 3. Analise
+
+-   As métricas e performance do modelo não foram Satisfatórias. RMSE e MSE não se aproximaram de zero
+
+![Captura de tela analise](https://github.com/user-attachments/assets/30addf09-5d87-4b46-84c2-9016b0aed071)
+
+## RMSE e MSE não se aproximaram de zero
+
+![Captura de tela 2024-08-04 234925](https://github.com/user-attachments/assets/134ccc7e-717f-415b-8e55-185367b4d351)
+ 
+
+## Na tentativade  ajustes no modelo para obter um desempenho satisfatório, fiz outro Dataset com mais uma coluna ( Preços )
+
+![Captura de tela novo3](https://github.com/user-attachments/assets/96c6e3da-82ad-4f25-ac4e-0a22b8db6563)
+
+
+![Captura de tela novo4](https://github.com/user-attachments/assets/2e9f3981-69f9-443a-8c7b-817ed90f7bd5)
+
+  ### As métricas e performance do modelo  foram Satisfatórias. Os Valores de RMSE e MSE estão próximos de zero
+  
+![Captura de tela n6](https://github.com/user-attachments/assets/0565d6c7-f1e0-4125-aa17-f156ab5a128f)
+
+
+
+### 4. Previsão
+
+ ## Ao Testar modelo treinado para fazer previsões de estoque no primeiro Dataset Gerado, meu tempo de uso na Plataforma da AWS expirou.
+
+ ![Captura de tela 2024-08-05 234115](https://github.com/user-attachments/assets/5b6290bc-dff7-4546-aff0-d7cbb7f66f7f)
+
+ ## Falha na previsão 
+O uso da sua conta da AWS para a instância de transformação 'ml.m5.4xlarge' atingiu seu limite, e você está solicitando 1 instância adicional. Entre em contato com seu administrador para aumentar a cota da sua conta. Se você for um administrador ou um usuário individual, use o console do AWS Service Quotas para solicitar um aumento para a cota 'Número máximo de instâncias'.
+Se você continuar a ver esse problema, entre em contato com o suporte da AWS e forneça o seguinte código: <f5759813-ff6f-4574-9dcf-04bff4b3299b> para resolver o problema.
+ 
+### Conclusão:
+
+Fantástico esse Bootcamp Nexa - Machine Learning  na AWS
+
+Me agregou muito conhecimento!!!
+
